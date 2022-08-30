@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import *
+from .forms import UserForm
 
 
 def index(request):
-    return render(request, "firstapp\index.html")
+    userform = UserForm()
+    return render(request, "firstapp\index.html", {"form": userform})
 
 
 def about(request):

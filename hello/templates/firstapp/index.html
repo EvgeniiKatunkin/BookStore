@@ -1,4 +1,16 @@
-{% extends "firstapp/base.html" %}
-{% block title %}Index{% endblock title %}
-{% block header %}Main page{% endblock header %}
-{% block content %} The bunch of index.html and base.html templates{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django form</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
