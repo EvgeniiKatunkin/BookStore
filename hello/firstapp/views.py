@@ -3,12 +3,11 @@ from django.http import HttpResponse
 
 
 def index(request):
-    header = "Personal data"
-    langs = ["English", "German", "Spanish"]
-    user = {"name": "Max", "age": 30}
-    addr = ("Kralja Nikole", 23, 45)
-    data = {"header": header, "langs": langs, "user": user, "address": addr}
-    return render(request, "index.html", context=data)
+    return render(request, "firstapp\index.html")
+
+
+def about(request):
+    return render(request, "firstapp\\about.html")
 
 
 def products(request, productid):
